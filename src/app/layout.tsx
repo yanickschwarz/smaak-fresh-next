@@ -3,6 +3,7 @@ import { Playfair_Display, DM_Sans, DM_Mono } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import AppFrame from "@/components/layout/AppFrame";
 import { siteConfig } from "@/lib/site-config";
 import { OrganizationJsonLd, LocalBusinessJsonLd } from "@/components/seo/JsonLd";
 import "./globals.css";
@@ -44,7 +45,6 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   keywords: [
     "Hofladen Sarmenstorf",
-    "Hofladen Bettwil",
     "Bauernladen Aargau",
     "regionale Produkte Freiamt",
     "24h offen Lebensmittel",
@@ -118,9 +118,13 @@ export default function RootLayout({
       <body className="bg-background text-foreground antialiased">
         <OrganizationJsonLd />
         <LocalBusinessJsonLd />
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <div className="min-h-screen flex flex-col relative">
+          <AppFrame>
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </AppFrame>
+        </div>
         <Toaster />
       </body>
     </html>

@@ -178,8 +178,8 @@ export default function UeberEusPage() {
                   seiner Region und den Menschen, die Wert auf Qualität, Frische und Nachhaltigkeit legen.
                 </p>
                 <p>
-                  Was als Idee in Sarmenstorf begann, ist heute ein fester Bestandteil der lokalen Gemeinschaft — mit
-                  zwei Standorten, acht Produzenten und einem stetig wachsenden Sortiment.
+                  Was als Idee in Sarmenstorf begann, ist heute ein fester Bestandteil der lokalen Gemeinschaft —
+                  mit acht Produzenten und einem stetig wachsenden Sortiment.
                 </p>
               </div>
             </ScrollReveal>
@@ -208,7 +208,7 @@ export default function UeberEusPage() {
                 </p>
                 <p>
                   Im Mai 2021 eröffnete er den smaak! fresh Laden in Sarmenstorf — im historischen Muetterlihuus,
-                  24 Stunden am Tag zugänglich. 2023 folgte der zweite Standort in Bettwil im Chäsihüsli.
+                  24 Stunden am Tag zugänglich.
                 </p>
                 <p>
                   «Ich kenne jeden einzelnen Produzenten persönlich. Das ist mir wichtig — denn nur so kann ich
@@ -220,26 +220,18 @@ export default function UeberEusPage() {
         </div>
       </section>
 
-      {/* Läden */}
       <section className="bg-white py-20 md:py-28">
         <div className="max-w-[1800px] mx-auto px-5 md:px-8">
           <ScrollReveal>
-            <SectionLabel className="mb-4 block">EUSI LÄDE</SectionLabel>
-            <h2 className="font-display text-section-title text-earth mb-12">Zwei Standorte, ei Mission</h2>
+            <SectionLabel className="mb-4 block">EUSE LADE</SectionLabel>
+            <h2 className="font-display text-section-title text-earth mb-12">Ei Standort, ei Mission</h2>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="max-w-2xl">
             <ScrollReveal>
-              <Link href="/laede/sarmenstorf" className="group block">
+              <Link href="/laede" className="group block">
                 <ParallaxImage src="/images/sarmenstorf.jpg" alt="smaak! fresh Sarmenstorf" className="aspect-[3/2] mb-4" />
                 <h3 className="font-display text-2xl text-earth group-hover:text-primary transition-colors">Sarmenstorf</h3>
                 <p className="font-body text-foreground/60 text-sm mt-1">Im Muetterlihuus · 365 Täg · 24h offe</p>
-              </Link>
-            </ScrollReveal>
-            <ScrollReveal delay={0.1}>
-              <Link href="/laede/bettwil" className="group block">
-                <ParallaxImage src="/images/bettwil.jpg" alt="smaak! fresh Bettwil" className="aspect-[3/2] mb-4" />
-                <h3 className="font-display text-2xl text-earth group-hover:text-primary transition-colors">Bettwil</h3>
-                <p className="font-body text-foreground/60 text-sm mt-1">Im Chäsihüsli · 365 Täg · 06:00–22:00</p>
               </Link>
             </ScrollReveal>
           </div>

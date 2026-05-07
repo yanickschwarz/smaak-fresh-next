@@ -210,7 +210,6 @@ export default function BestelleBrotPage() {
                     <select {...register("abholort")} className="form-input">
                       <option value="">Bitte wählen...</option>
                       <option value="Sarmenstorf">Sarmenstorf</option>
-                      <option value="Bettwil">Bettwil</option>
                     </select>
                   </OrderField>
 

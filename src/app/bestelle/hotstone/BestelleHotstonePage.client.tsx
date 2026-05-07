@@ -228,7 +228,6 @@ export default function BestelleHotstonePage() {
                     <select {...register("abholort")} className="form-input">
                       <option value="">Bitte wählen...</option>
                       <option value="smaak! fresh Sarmenstorf">smaak! fresh Sarmenstorf</option>
-                      <option value="smaak! fresh Bettwil">smaak! fresh Bettwil</option>
                       <option value="Lieferung wenn möglich">Lieferung wenn möglich (im Kommentar erfassen)</option>
                     </select>
                   </OrderField>

@@ -29,13 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/laede/sarmenstorf`,
       lastModified,
       changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/laede/bettwil`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.9,
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/produkt`,

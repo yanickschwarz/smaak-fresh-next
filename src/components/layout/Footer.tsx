@@ -34,23 +34,13 @@ export default function Footer() {
 
           <div>
             <h4 className="text-label text-gold mb-4">Lade & Öffnigszit</h4>
-            <div className="space-y-5">
-              <div>
-                <p className="font-body text-sm font-medium text-cream/90">{locations.sarmenstorf.name}</p>
-                <p className="font-body text-xs text-cream/50">
-                  {locations.sarmenstorf.streetAddress} · {locations.sarmenstorf.postalCode}{" "}
-                  {locations.sarmenstorf.addressLocality}
-                </p>
-                <p className="font-mono-label text-xs text-gold/80 mt-1">{locations.sarmenstorf.hoursLabel}</p>
-              </div>
-              <div>
-                <p className="font-body text-sm font-medium text-cream/90">{locations.bettwil.name}</p>
-                <p className="font-body text-xs text-cream/50">
-                  {locations.bettwil.streetAddress} · {locations.bettwil.postalCode}{" "}
-                  {locations.bettwil.addressLocality}
-                </p>
-                <p className="font-mono-label text-xs text-gold/80 mt-1">{locations.bettwil.hoursLabel}</p>
-              </div>
+            <div>
+              <p className="font-body text-sm font-medium text-cream/90">{locations.sarmenstorf.name}</p>
+              <p className="font-body text-xs text-cream/50">
+                {locations.sarmenstorf.streetAddress} · {locations.sarmenstorf.postalCode}{" "}
+                {locations.sarmenstorf.addressLocality}
+              </p>
+              <p className="font-mono-label text-xs text-gold/80 mt-1">{locations.sarmenstorf.hoursLabel}</p>
             </div>
           </div>
 
@@ -58,7 +48,7 @@ export default function Footer() {
             <h4 className="text-label text-gold mb-4">Links</h4>
             <nav className="flex flex-col gap-2.5">
               {[
-                { label: "Euse Lade", path: "/laede" },
+                { label: "Eusi Lade", path: "/laede" },
                 { label: "Eusi Produkt", path: "/produkt" },
                 { label: "Bestelle", path: "/bestelle" },
                 { label: "Eusi Produzänte", path: "/produzente" },
@@ -87,7 +77,7 @@ export default function Footer() {
         <div className="w-full px-5 md:px-8 py-5">
           <div className="max-w-[1800px] mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
             <p className="font-body text-xs text-cream/40">
-              © {new Date().getFullYear()} smaak! fresh · Sarmenstorf & Bettwil
+              © {new Date().getFullYear()} smaak! fresh · Sarmenstorf
             </p>
             <a
               href="https://www.vlix.ch"

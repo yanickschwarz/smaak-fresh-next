@@ -8,12 +8,12 @@ export const dynamic = "force-static";
 export const metadata: Metadata = {
   title: "smaak! fresh — Frischi Produkt diräkt vom Produzänt",
   description:
-    "Lebensmittelmarkt in Sarmenstorf und Bettwil. 365 Tage offen, Selbstbedienung, regionale Produkte direkt vom Produzenten — Brot, Gemüse, Fleisch, Eier, Käse und mehr.",
+    "Lebensmittelmarkt in Sarmenstorf. 365 Tage offen, Selbstbedienung, regionale Produkte direkt vom Produzenten — Brot, Gemüse, Fleisch, Eier, Käse und mehr.",
   alternates: { canonical: absoluteUrl("/") },
   openGraph: {
     title: "smaak! fresh — Frischi Produkt diräkt vom Produzänt",
     description:
-      "Lebensmittelmarkt in Sarmenstorf und Bettwil. 365 Tage offen, Selbstbedienung, regionale Produkte direkt vom Produzenten.",
+      "Lebensmittelmarkt in Sarmenstorf. 365 Tage offen, Selbstbedienung, regionale Produkte direkt vom Produzenten.",
     url: absoluteUrl("/"),
     type: "website",
   },
@@ -23,7 +23,7 @@ const faqItems = [
   {
     question: "Wann haben die Läden geöffnet?",
     answer:
-      "Unser Laden in Sarmenstorf ist 365 Tage im Jahr rund um die Uhr (24h) geöffnet. Bettwil hat täglich von 06:00 bis 22:00 Uhr offen. Beide Standorte funktionieren in Selbstbedienung.",
+      "Unser Laden in Sarmenstorf ist 365 Tage im Jahr rund um die Uhr (24h) geöffnet. Der Laden funktioniert in Selbstbedienung mit Twint oder Bargeld.",
   },
   {
     question: "Wie kann ich bezahlen?",
@@ -47,7 +47,7 @@ const faqItems = [
   {
     question: "Gibt es einen Parkplatz?",
     answer:
-      "Ja! In Sarmenstorf können Sie den grossen Parkplatz auf dem Lindeplatz beim Beck Ruckli nutzen und gelangen dann durch das Gartentürchen direkt zum Laden. In Bettwil gibt es Parkplätze direkt vor dem Laden.",
+      "Ja! In Sarmenstorf können Sie den grossen Parkplatz auf dem Lindeplatz beim Beck Ruckli nutzen und gelangen dann durch das Gartentürchen direkt zum Laden.",
   },
   {
     question: "Kann ich als Produzent bei smaak! fresh mitmachen?",

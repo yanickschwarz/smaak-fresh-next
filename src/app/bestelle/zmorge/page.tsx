@@ -9,7 +9,7 @@ export const dynamic = "force-static";
 export const metadata: Metadata = {
   title: "Sonntagszmorge — Frisches Brot, Zopf, Gipfeli vom Beck Ruckli",
   description:
-    "Sonntagsbestellung für frisches Brot, Zopf und Gipfeli vom Beck Ruckli — Bestellschluss Freitag 18:00 Uhr, Abholung Sonntag ab 07:30 Uhr in Sarmenstorf oder Bettwil.",
+    "Sonntagsbestellung für frisches Brot, Zopf und Gipfeli vom Beck Ruckli — Bestellschluss Freitag 18:00 Uhr, Abholung Sonntag ab 07:30 Uhr in Sarmenstorf.",
   alternates: { canonical: absoluteUrl("/bestelle/zmorge") },
   openGraph: {
     title: "Sonntagszmorge — Brot vom Beck Ruckli | smaak! fresh",

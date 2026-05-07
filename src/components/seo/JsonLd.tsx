@@ -1,25 +1,11 @@
 import { siteConfig, locations } from "@/lib/site-config";
 
-/**
- * JSON-LD Structured Data Helpers.
- *
- * Verwendung im Layout / pro Page:
- *   <OrganizationJsonLd />
- *   <LocalBusinessJsonLd />
- *   <FAQJsonLd items={faqItems} />
- *   <BreadcrumbJsonLd items={[{name, url}, ...]} />
- *
- * Alle Schemas folgen schema.org-Spec und werden von Google Rich Results
- * unterstützt. Geprüft mit https://validator.schema.org.
- */
-
 type Json = Record<string, unknown>;
 
 function JsonLdScript({ data }: { data: Json | Json[] }) {
   return (
     <script
       type="application/ld+json"
-      // Next inlines this in the static HTML — no client JS needed.
       dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
     />
   );
@@ -39,16 +25,15 @@ export function OrganizationJsonLd() {
 }
 
 export function LocalBusinessJsonLd() {
-  // schema.org "GroceryStore" subtype of LocalBusiness — passt für Hofladen
-  const buildLocation = (loc: typeof locations.sarmenstorf | typeof locations.bettwil) => ({
+  const loc = locations.sarmenstorf;
+  const data = {
     "@context": "https://schema.org",
     "@type": "GroceryStore",
-    "@id": `${siteConfig.url}/laede/${loc.slug}#location`,
+    "@id": `${siteConfig.url}/laede#location`,
     name: loc.name,
-    url: `${siteConfig.url}/laede/${loc.slug}`,
+    url: `${siteConfig.url}/laede`,
     image: `${siteConfig.url}/og-image.jpg`,
     email: loc.email,
-    ...(loc.phone ? { telephone: loc.phone } : {}),
     address: {
       "@type": "PostalAddress",
       streetAddress: loc.streetAddress,
@@ -62,32 +47,21 @@ export function LocalBusinessJsonLd() {
       latitude: loc.geo.lat,
       longitude: loc.geo.lng,
     },
-    openingHoursSpecification:
-      loc.slug === "sarmenstorf"
-        ? [
-            {
-              "@type": "OpeningHoursSpecification",
-              dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-              opens: "00:00",
-              closes: "23:59",
-            },
-          ]
-        : [
-            {
-              "@type": "OpeningHoursSpecification",
-              dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-              opens: "06:00",
-              closes: "22:00",
-            },
-          ],
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        opens: "00:00",
+        closes: "23:59",
+      },
+    ],
     parentOrganization: {
       "@type": "Organization",
       name: siteConfig.name,
       url: siteConfig.url,
     },
-  });
-
-  return <JsonLdScript data={[buildLocation(locations.sarmenstorf), buildLocation(locations.bettwil)]} />;
+  };
+  return <JsonLdScript data={data} />;
 }
 
 export function FAQJsonLd({ items }: { items: { question: string; answer: string }[] }) {

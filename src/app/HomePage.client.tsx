@@ -37,7 +37,6 @@ const IMG = {
   fleisch: "/images/fleisch.jpg",
   dinkel: "/images/dinkel.jpg",
   sarmenstorf: "/images/sarmenstorf.jpg",
-  bettwil: "/images/bettwil.jpg",
   burger: "/images/burger.jpg",
   equipmentTeppanyaki: "/images/equipment-teppanyaki.jpg",
   biomobil: "/images/biomobil.jpg",
@@ -180,7 +179,7 @@ function HeroSection() {
           Frischi Produkt <em className="italic">diräkt</em> vom Produzänt
         </h1>
         <p className="font-mono-label text-primary text-xs md:text-sm mt-3 tracking-wider">
-          365 Täg im Johr offe · Sarmenstorf & Bettwil
+          365 Täg im Johr offe · Sarmenstorf
         </p>
         <div className="flex flex-wrap justify-center gap-4 mt-6">
           <Link
@@ -214,20 +213,20 @@ function USPSection() {
             number="8"
             label="Produzänte"
             headline="Diräkt vom Produzänt"
-            text="Mir arbeite mit acht Produzänte us em Freiamt zäme — alli persönlich kännt."
+            text="Alle Produkte, die du bei smaak! fresh kaufst, werden direkt von den Produzenten geliefert. So garantieren wir 100% Frische und vollen Umsatz ohne unnötige Zwischenhändler und Verträge für die Produzenten."
           />
           <StatBadge
             number="365"
-            label="Täg offe"
-            headline="Immer für dich da"
-            text="365 Täg im Johr, rund um d'Uhr in Sarmenstorf, 6–22 Uhr in Bettwil."
+            label="Täg im Johr"
+            headline="Immer offe för Dech"
+            text="Euse Lade in Sarmenstorf het 365 Täg im Johr rund um d'Uhr in Sälbschtbedienig offe. D'Rettig, wenn de Sunntigzopf verbrennt oder d'Nochbure spontan zum BBQ chömed!"
             delay={0.1}
           />
           <StatBadge
-            number="2"
+            number="1"
             label="Standort"
-            headline="Sarmenstorf & Bettwil"
-            text="Zwei Lädeli im Freiamt, in Sälbschtbedienig, mit Bezahlig per Twint oder bar."
+            headline="Mit Herz för Mönsch & Umwält"
+            text="Wir kennen alle unsere Produzenten persönlich und legen grossen Wert auf nachhaltige Produkte und fairen Handel. Wir setzen auf Regionalität und direkte Beziehungen."
             delay={0.2}
           />
         </div>
@@ -241,39 +240,49 @@ function USPSection() {
 /* -------------------------------------------------------------------------- */
 
 function AktionSection() {
-  return (
-    <section className="bg-background py-20 md:py-28 relative">
-      <div className="max-w-[1800px] mx-auto px-5 md:px-8">
-        <ScrollReveal>
-          <SectionLabel className="mb-4 block">Aktuelli Aktion</SectionLabel>
-          <h2 className="text-section-title font-display text-foreground mb-12">
-            Burger<em className="italic">@Home</em>
-          </h2>
-        </ScrollReveal>
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+  const imgY = useTransform(scrollYProgress, [0, 1], ["30%", "-30%"]);
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+  return (
+    <section ref={sectionRef} className="bg-background py-20 md:py-28 relative overflow-hidden">
+      <div className="max-w-[1800px] mx-auto px-5 md:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
           <ScrollReveal>
-            <div className="relative aspect-square">
-              <Image
-                src={IMG.burgerGross}
-                alt="Burger@Home — Bestelle dei Burger-Päckli für dahei"
-                fill
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                className="object-contain"
-              />
+            <div>
+              <SectionLabel className="mb-4 block">FÜR DIN ANLASS</SectionLabel>
+              <h2 className="text-section-title font-display text-foreground mb-5">
+                Für din nächste <em className="italic">Anlass</em>!
+              </h2>
+              <p className="font-body text-foreground/70 text-base md:text-lg leading-relaxed mb-6 max-w-xl">
+                Burger@Home, HotStone oder Fondue Chinoise — wir organisieren euer Esserlebnis.
+              </p>
+              <Link
+                href="/bestelle"
+                className="inline-flex items-center font-body text-sm font-medium text-primary hover:text-foreground transition-colors"
+              >
+                Unsere Angebote entdecken →
+              </Link>
             </div>
           </ScrollReveal>
           <ScrollReveal delay={0.15}>
-            <p className="font-body text-foreground/70 text-base md:text-lg leading-relaxed mb-6">
-              Hol dir s'Burger-Erläbnis hei: Frische Brötli vom Beck Ruckli, Rindshackfleisch vom Metzg
-              Thalmann, Bio-Salat us em Freiamt — alles im Päckli, ready zum Brate.
-            </p>
-            <Link
-              href="/bestelle/burger"
-              className="inline-flex items-center font-body text-sm font-medium bg-primary text-white px-7 py-3 rounded-full hover:opacity-90 transition-opacity"
-            >
-              Burger bstelle →
-            </Link>
+            <div className="relative w-full h-full" style={{ perspective: "1000px" }}>
+              <motion.div
+                className="relative w-full aspect-square"
+                style={{ y: imgY, transformStyle: "preserve-3d" }}
+              >
+                <Image
+                  src={IMG.burgerGross}
+                  alt="Burger Erlebnis"
+                  fill
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  className="object-contain"
+                />
+              </motion.div>
+            </div>
           </ScrollReveal>
         </div>
       </div>
@@ -286,35 +295,48 @@ function AktionSection() {
 /* -------------------------------------------------------------------------- */
 
 function EquipmentSection() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+  const imgY = useTransform(scrollYProgress, [0, 1], ["8%", "-8%"]);
+
   return (
-    <section className="bg-cream py-20 md:py-28 relative z-[70]">
+    <section ref={sectionRef} className="bg-white py-20 md:py-28 relative overflow-hidden">
       <div className="max-w-[1800px] mx-auto px-5 md:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          <ScrollReveal>
-            <SectionLabel className="mb-4 block">Party-Equipment Miete</SectionLabel>
-            <h2 className="text-section-title font-display text-foreground mb-6">
-              Du bruuchsch <em className="italic">Equipment</em>?
-            </h2>
-            <p className="font-body text-foreground/70 text-base md:text-lg leading-relaxed mb-6">
-              Vo de Pinsa-Ofe bis zur Turbo-Raclette: Mir vermiete Equipment für dei nächst Party,
-              Geburi oder Familiefäscht. Inklusiv Lieferig und Abholig.
-            </p>
-            <Link
-              href="/bestelle/equipment"
-              className="inline-flex items-center font-body text-sm font-medium bg-primary text-white px-7 py-3 rounded-full hover:opacity-90 transition-opacity"
-            >
-              Equipment entdecke →
-            </Link>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+          <ScrollReveal className="order-2 md:order-1">
+            <div className="relative w-full overflow-hidden rounded-lg aspect-[5/4] md:aspect-[6/5]">
+              <motion.div
+                className="absolute inset-0 w-full h-[120%] -top-[10%]"
+                style={{ y: imgY }}
+              >
+                <Image
+                  src={IMG.equipmentTeppanyaki}
+                  alt="Party-Equipment mieten bei smaak! fresh"
+                  fill
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  className="object-cover"
+                />
+              </motion.div>
+            </div>
           </ScrollReveal>
-          <ScrollReveal delay={0.15}>
-            <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
-              <Image
-                src={IMG.equipmentTeppanyaki}
-                alt="Teppanyaki und weiteres Party-Equipment"
-                fill
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                className="object-cover"
-              />
+          <ScrollReveal delay={0.15} className="order-1 md:order-2">
+            <div>
+              <SectionLabel className="mb-4 block">PARTY-EQUIPMENT</SectionLabel>
+              <h2 className="text-section-title font-display text-foreground mb-5">
+                Miet dis <em className="italic">Equipment</em>!
+              </h2>
+              <p className="font-body text-foreground/70 text-base md:text-lg leading-relaxed mb-6 max-w-xl">
+                Teppanyaki, Pinsa-Ofen, Turbo-Raclette, Friteuse & meh — alles, was din Aalass zum Erläbnis macht.
+              </p>
+              <Link
+                href="/bestelle/equipment"
+                className="inline-flex items-center font-body text-sm font-medium text-primary hover:text-foreground transition-colors"
+              >
+                Equipment entdecke →
+              </Link>
             </div>
           </ScrollReveal>
         </div>
@@ -450,9 +472,9 @@ function StandorteSection() {
           </h2>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="max-w-2xl mx-auto">
           <ScrollReveal>
-            <Link href="/laede/sarmenstorf" className="block">
+            <Link href="/laede" className="block">
               <LocationCard
                 label="SARMENSTORF"
                 subline="Im Muetterlihuus"
@@ -460,21 +482,6 @@ function StandorteSection() {
                 hours="365 Täg · 24 Stunde offe"
                 note="Grosser Parkplatz uf em Lindeplatz bim Beck Ruckli, denn durchs Gartentüürli diräkt zum Lade!"
                 image={IMG.sarmenstorf}
-              />
-            </Link>
-          </ScrollReveal>
-
-          <ScrollReveal delay={0.1}>
-            <Link href="/laede/bettwil" className="block">
-              <LocationCard
-                label="BETTWIL"
-                subline="Im Chäsihüsli"
-                address="Schulhausstrasse 1, 5618 Bettwil"
-                hours="365 Täg · 06:00 – 22:00 offe"
-                phone="077 806 04 33"
-                email="bettwil@smaak-fresh.ch"
-                note="Direkt bei der Bushaltestelle mit Parkplätzen vor dem Laden!"
-                image={IMG.bettwil}
               />
             </Link>
           </ScrollReveal>
