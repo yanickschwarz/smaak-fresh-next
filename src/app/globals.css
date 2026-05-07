@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --cream: 60 20% 95%;
+    --earth: 0 0% 18%;
+    --moss: 120 22% 32%;
+    --terracotta: 98 49% 51%;
+    --gold: 98 55% 62%;
+    --mist: 30 8% 89%;
+    --off-white: 60 15% 97%;
+    --gray-mid: 0 0% 55%;
+
+    --background: var(--cream);
+    --foreground: var(--earth);
+    --card: var(--off-white);
+    --card-foreground: var(--earth);
+    --popover: var(--off-white);
+    --popover-foreground: var(--earth);
+    --primary: var(--terracotta);
+    --primary-foreground: var(--cream);
+    --secondary: var(--moss);
+    --secondary-foreground: var(--cream);
+    --muted: var(--mist);
+    --muted-foreground: 30 10% 45%;
+    --accent: var(--gold);
+    --accent-foreground: var(--earth);
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 33 20% 82%;
+    --input: 33 20% 82%;
+    --ring: var(--terracotta);
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-dm-sans), sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-playfair), serif;
+  }
+
+  /* Respect user motion preferences for accessibility + Lighthouse */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: var(--font-playfair), serif;
+  }
+
+  .font-body {
+    font-family: var(--font-dm-sans), sans-serif;
+  }
+
+  .font-mono-label {
+    font-family: var(--font-dm-mono), monospace;
+  }
+
+  .text-hero {
+    font-size: clamp(3.25rem, 8vw, 7.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+  }
+
+  .text-section-title {
+    font-size: clamp(2.25rem, 5vw, 4.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+
+  .text-label {
+    font-family: var(--font-dm-mono), monospace;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: 768px) {
+    .text-label {
+      font-size: 0.75rem;
+    }
+  }
+
+  .gradient-hero-overlay {
+    background: linear-gradient(
+      180deg,
+      hsl(var(--earth) / 0.75) 0%,
+      hsl(var(--earth) / 0.5) 40%,
+      hsl(var(--earth) / 0.7) 100%
+    );
+  }
+
+  .nav-frosted {
+    background: hsl(var(--cream) / 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .card-hover {
+    @apply transition-all duration-500 ease-out;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 60px -15px hsl(var(--earth) / 0.2);
+  }
+
+  .clip-reveal {
+    clip-path: inset(0 0 100% 0);
+    animation: clipReveal 0.9s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  }
+
+  .clip-reveal-delay-1 { animation-delay: 100ms; }
+  .clip-reveal-delay-2 { animation-delay: 200ms; }
+  .clip-reveal-delay-3 { animation-delay: 300ms; }
+
+  .form-input {
+    @apply w-full font-body text-sm bg-off-white border border-mist rounded-lg px-4 py-3 text-foreground placeholder:text-foreground/30 focus:outline-none focus:ring-2 focus:ring-terracotta/30 focus:border-terracotta transition-all;
+  }
+
+  @keyframes clipReveal {
+    to {
+      clip-path: inset(0 0 0% 0);
+    }
+  }
+}
