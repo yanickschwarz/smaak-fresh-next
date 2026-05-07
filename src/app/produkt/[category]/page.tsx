@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { absoluteUrl } from "@/lib/utils";
 import { productCategories, siteConfig, type ProductCategory } from "@/lib/site-config";
-import ProduktDetailPage, { categoryData } from "./ProduktDetailPage.client";
+import { categoryData } from "./categoryData";
+import ProduktDetailPage from "./ProduktDetailPage.client";
 import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 
 export const dynamic = "force-static";
