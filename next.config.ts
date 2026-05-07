@@ -3,9 +3,9 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   reactStrictMode: true,
 
-  // All pages are statically rendered at build time (SSG).
-  // Forms remain interactive client-side via Supabase.
-  output: "standalone",
+  // Vercel handles output structure automatically — `output: "standalone"`
+  // would only be needed for self-hosted Docker deployments and breaks
+  // dynamic-route static-asset serving on Vercel.
 
   images: {
     formats: ["image/avif", "image/webp"],
