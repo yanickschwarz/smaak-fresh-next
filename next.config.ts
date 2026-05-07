@@ -29,8 +29,8 @@ const nextConfig: NextConfig = {
       { source: "/shop", destination: "/bestelle", permanent: true },
       { source: "/produzenten", destination: "/produzente", permanent: true },
       { source: "/standorte", destination: "/laede", permanent: true },
-      { source: "/standorte/sarmenstorf", destination: "/laede/sarmenstorf", permanent: true },
-      { source: "/standorte/bettwil", destination: "/laede/bettwil", permanent: true },
+      { source: "/standorte/sarmenstorf", destination: "/laede", permanent: true },
+      { source: "/standorte/bettwil", destination: "/laede", permanent: true },
     ];
   },
 
