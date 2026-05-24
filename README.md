@@ -48,7 +48,6 @@ aus — kein SSR-Server zur Laufzeit nötig.
 | `/`                        | `app/page.tsx`                       |
 | `/laede`                   | `app/laede/page.tsx`                 |
 | `/laede/sarmenstorf`       | `app/laede/sarmenstorf/page.tsx`     |
-| `/laede/bettwil`           | `app/laede/bettwil/page.tsx`         |
 | `/produkt`                 | `app/produkt/page.tsx`               |
 | `/produkt/[category]`      | `app/produkt/[category]/page.tsx`    |
 | `/bestelle`                | `app/bestelle/page.tsx`              |

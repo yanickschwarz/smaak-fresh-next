@@ -36,7 +36,7 @@ export const categoryData: Record<
       {
         name: "Chäshütte",
         image: "/images/chaeshuette.jpg",
-        desc: "Echter Alpkäse aus den Schweizer Bergen — handwerklich hergestellt mit viel Hingabe und nach traditionellen Rezepten.",
+        desc: "Echter Alpchäs aus den Schweizer Bergen — handwerklich hergestellt mit viel Hingabe und nach traditionellen Rezepten.",
       },
     ],
   },
@@ -84,7 +84,7 @@ export const categoryData: Record<
   },
   fleisch: {
     name: "Fleisch, Wurst & Charcuterie",
-    producer: "Metzg Thalmann, Fahrwangen",
+    producer: "Thalmann-Metzg, Fahrwangen",
     description:
       "Die Spezialitäten-Metzgerei Fahrwangen verarbeitet Fleisch aus der Region und überrascht immer wieder mit neuen und innovativen Produkten.",
     image: "/images/fleisch.jpg",

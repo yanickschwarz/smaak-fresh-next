@@ -32,7 +32,7 @@ export default function ProductCategoryCard({
       />
       <div className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-all duration-500" />
       <div className="absolute bottom-0 left-0 p-6 md:p-8">
-        <span className="text-label text-foreground/60 block mb-2 drop-shadow-[0_1px_3px_rgba(255,255,255,0.8)]">
+        <span className="text-label text-earth bg-cream/85 inline-block px-2.5 py-1 rounded-sm mb-2 backdrop-blur-sm">
           {producer}
         </span>
         <h3 className="font-display text-foreground/90 text-2xl md:text-3xl drop-shadow-[0_1px_4px_rgba(255,255,255,0.9)]">

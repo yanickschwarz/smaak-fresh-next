@@ -74,7 +74,7 @@ export default function ProduktPage() {
             <h2 className="font-display text-2xl md:text-3xl text-foreground mb-4">Garantiert frisch & regional</h2>
             <p className="font-body text-foreground/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-6">
               Alle unsere Produkte stammen von ausgewählten Produzenten aus der Region und werden garantiert frisch in
-              unsere Läden geliefert. Qualität, Nachhaltigkeit und kurze Transportwege sind uns wichtig.
+              unseren Laden geliefert. Qualität, Nachhaltigkeit und kurze Transportwege sind uns wichtig.
             </p>
             <Link
               href="/produzente"

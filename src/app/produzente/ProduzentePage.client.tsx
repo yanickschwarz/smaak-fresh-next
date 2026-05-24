@@ -18,25 +18,18 @@ const allProducers = [
   },
   {
     name: "ImRoos",
-    subtitle: "Regionale Buure us Muri",
+    subtitle: "Regionali Produkt us Muri",
     text: "Regionaler Bauer aus Muri, der mit viel Leidenschaft saisonales Gemüse und regionale Produkte anbaut.",
     image: "/images/imroos.jpg",
     link: "imroos.ch",
     products: ["Gemüse", "Regional"],
   },
   {
-    name: "Malaguese",
-    subtitle: "Avocados us Málaga",
-    text: "Vom Baum direkt auf deinen Tisch — feinste Avocados aus Málaga, Spanien. Direkt importiert, ohne Umwege.",
-    image: "/images/malaguese.jpg",
-    link: "malaguese.com",
-    products: ["Avocados", "Früchte"],
-  },
-  {
-    name: "Familie Thalmann",
+    name: "Thalmann-Metzg",
     subtitle: "Spezialitäte Metzg us Fahrwange",
     text: "Die Familie Thalmann betreibt ihre Spezialitäten-Metzgerei in Fahrwangen seit 1995 und bezieht das Fleisch von Bauern aus der Region. Mathias Thalmann hat für smaak! fresh eine unglaublich gute Rindsbratwurst entwickelt.",
     image: "/images/thalmann.jpg",
+    link: "thalmann-metzg.ch",
     products: ["Fleisch", "Wurst", "Charcuterie"],
   },
   {
@@ -57,7 +50,7 @@ const allProducers = [
   {
     name: "Käserei Seetal",
     subtitle: "Käserei in Hämikon",
-    text: "Die Geschichte der Käserei Seetal hat schon 1897 angefangen. Seit 2013 führt Walter Lang das Familienunternehmen zusammen mit seinem Sohn Manuel. Grosser Wert auf Nachhaltigkeit und faire Milchpreise.",
+    text: "Die Geschichte der Käserei Seetal hat schon 1897 angefangen. Seit 2013 führt Walter Lang das Familienunternehmen zusammen mit seinem Sohn Manuel. Sie legen grossen Wert auf Nachhaltigkeit und faire Milchpreise.",
     image: "/images/kaeserei-seetal.jpg",
     link: "kaeserei-seetal.ch",
     products: ["Käse", "Fondue", "Raclette", "Joghurt"],
@@ -65,10 +58,10 @@ const allProducers = [
   {
     name: "Chäshütte",
     subtitle: "Alpchäs us de Bärge",
-    text: "Echter Alpkäse aus den Schweizer Bergen — handwerklich hergestellt mit viel Hingabe und nach traditionellen Rezepten.",
+    text: "Echter Alpchäs aus den Schweizer Bergen — handwerklich hergestellt mit viel Hingabe und nach traditionellen Rezepten.",
     image: "/images/chaeshuette.jpg",
     link: "chaes-huette.ch",
-    products: ["Alpkäse", "Spezialitäten"],
+    products: ["Alpchäs", "Spezialitäten"],
   },
   {
     name: "Hubers Dinkelspezialitäten",
@@ -101,6 +94,14 @@ const allProducers = [
     image: "/images/merlasco.jpg",
     link: "merlasco.com",
     products: ["Gewürze", "Delikatessen"],
+  },
+  {
+    name: "Malaguese",
+    subtitle: "Avocados us Málaga",
+    text: "Vom Baum direkt auf deinen Tisch — feinste Avocados aus Málaga, Spanien. Direkt importiert, ohne Umwege.",
+    image: "/images/malaguese.jpg",
+    link: "malaguese.com",
+    products: ["Avocados", "Früchte"],
   },
 ];
 
@@ -174,7 +175,7 @@ export default function ProduzentePage() {
       <section className="bg-primary py-16 md:py-24 relative z-[70]">
         <div className="max-w-[1800px] mx-auto px-5 md:px-8 text-center">
           <ScrollReveal>
-            <h2 className="text-section-title font-display text-white mb-4">Möchtisch Produzänt wärde?</h2>
+            <h2 className="text-section-title font-display text-white mb-4">Wetsch au dini Produkt im Lade abüte?</h2>
             <p className="font-body text-white/80 text-base md:text-lg mb-8 max-w-xl mx-auto">
               Wir suchen stetig neue Partner aus der Region. Wenn du Produkte hast, die zu uns passen — melde dich!
             </p>

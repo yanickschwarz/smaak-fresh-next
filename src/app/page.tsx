@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 
 const faqItems = [
   {
-    question: "Wann haben die Läden geöffnet?",
+    question: "Wann hat der Laden geöffnet?",
     answer:
       "Unser Laden in Sarmenstorf ist 365 Tage im Jahr rund um die Uhr (24h) geöffnet. Der Laden funktioniert in Selbstbedienung mit Twint oder Bargeld.",
   },

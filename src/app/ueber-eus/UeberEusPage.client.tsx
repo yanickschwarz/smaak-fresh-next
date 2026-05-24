@@ -33,7 +33,7 @@ const values = [
     icon: Handshake,
   },
   {
-    title: "Fröschi",
+    title: "Früschi",
     text: "Täglich geliefert, saisonal und regional. Frischer geht es nicht.",
     icon: Leaf,
   },
@@ -170,7 +170,7 @@ export default function UeberEusPage() {
               <div className="space-y-4 font-body text-foreground/75 leading-relaxed">
                 <p>
                   smaak! fresh ist ein Lebensmittelmarkt, der ein top frisches und saisonales Angebot an Gemüse, Früchten,
-                  Fleisch, Brot und Delikatessen bietet — geliefert direkt von den Produzenten aus der Region.
+                  Fleisch, Brot und Delikatessen anbietet — geliefert direkt von den Produzenten aus der Region.
                 </p>
                 <p>
                   Die Idee entstand aus der Überzeugung, dass gute Lebensmittel keine Zwischenhändler brauchen. Marc
