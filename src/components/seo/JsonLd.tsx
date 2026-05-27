@@ -12,13 +12,15 @@ function JsonLdScript({ data }: { data: Json | Json[] }) {
 }
 
 export function OrganizationJsonLd() {
-  const data = {
+  const loc = locations.sarmenstorf;
+  const data: Json = {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: siteConfig.name,
     url: siteConfig.url,
     logo: `${siteConfig.url}/images/logo.png`,
     email: siteConfig.email,
+    ...(loc.phone ? { telephone: loc.phone } : {}),
     sameAs: [siteConfig.social.facebook, siteConfig.social.instagram].filter(Boolean),
   };
   return <JsonLdScript data={data} />;
@@ -26,7 +28,7 @@ export function OrganizationJsonLd() {
 
 export function LocalBusinessJsonLd() {
   const loc = locations.sarmenstorf;
-  const data = {
+  const data: Json = {
     "@context": "https://schema.org",
     "@type": "GroceryStore",
     "@id": `${siteConfig.url}/laede#location`,
@@ -34,6 +36,7 @@ export function LocalBusinessJsonLd() {
     url: `${siteConfig.url}/laede`,
     image: `${siteConfig.url}/og-image.jpg`,
     email: loc.email,
+    ...(loc.phone ? { telephone: loc.phone } : {}),
     address: {
       "@type": "PostalAddress",
       streetAddress: loc.streetAddress,
