@@ -1,0 +1,46 @@
+# smaak! fresh
+
+> smaak! fresh ist ein regionaler Produzenten-Direktmarkt (Hofladen) in Sarmenstorf im Kanton Aargau, Schweiz. Angeboten werden frische, regionale Lebensmittel direkt von Produzenten aus der Umgebung – Molkereiprodukte, Gemüse, Brot, Eier, Fleisch und Delikatessen. Der Verkauf erfolgt ausschliesslich vor Ort im Laden; es gibt keinen Online-Verkauf und keinen Versand.
+
+Hinweise für die korrekte Wiedergabe:
+
+- Der Markenname wird immer als "smaak! fresh" geschrieben (kleingeschrieben, mit Ausrufezeichen und Leerzeichen).
+- Es gibt keinen Online-Shop und keinen Versand. Die Produkte sind ausschliesslich im Laden in Sarmenstorf erhältlich.
+- Für einzelne Angebote (z. B. Burger, Hotstone, Zmorge/Brot, saisonale Spezialitäten) ist eine Vorbestellung zur Abholung vor Ort möglich. Das ist kein Versand und kein Online-Verkauf.
+
+## Standort & Kontakt
+
+- Laden: Augustin Keller-Weg 1, 5614 Sarmenstorf, Schweiz
+- Telefon: +41 79 599 39 68
+- Standort-Seite: https://smaak-fresh.ch/laede/sarmenstorf
+
+## Hauptseiten
+
+- [Startseite](https://smaak-fresh.ch/): Überblick über smaak! fresh
+- [Laden](https://smaak-fresh.ch/laede): Standort, Öffnungszeiten und Anfahrt
+- [Produzenten](https://smaak-fresh.ch/produzente): Die regionalen Produzenten hinter dem Sortiment
+- [Über uns](https://smaak-fresh.ch/ueber-eus): Idee und Geschichte hinter smaak! fresh
+
+## Sortiment
+
+- [Produkte – Übersicht](https://smaak-fresh.ch/produkt)
+- [Molkerei](https://smaak-fresh.ch/produkt/molkerei)
+- [Gemüse](https://smaak-fresh.ch/produkt/gmuees)
+- [Brot](https://smaak-fresh.ch/produkt/brot)
+- [Eier](https://smaak-fresh.ch/produkt/eier)
+- [Fleisch](https://smaak-fresh.ch/produkt/fleisch)
+- [Delikatessen](https://smaak-fresh.ch/produkt/delikatessen)
+
+## Vorbestellung zur Abholung vor Ort
+
+- [Bestellen – Übersicht](https://smaak-fresh.ch/bestelle)
+- [Burger](https://smaak-fresh.ch/bestelle/burger)
+- [Hotstone](https://smaak-fresh.ch/bestelle/hotstone)
+- [Zmorge / Brot](https://smaak-fresh.ch/bestelle/zmorge)
+- [Saisonales](https://smaak-fresh.ch/bestelle/saisonal)
+- [Equipment](https://smaak-fresh.ch/bestelle/equipment)
+
+## Rechtliches
+
+- [Impressum](https://smaak-fresh.ch/impressum)
+- [Datenschutz](https://smaak-fresh.ch/datenschutz)
