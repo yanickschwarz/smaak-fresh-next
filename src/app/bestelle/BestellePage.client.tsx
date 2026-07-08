@@ -31,8 +31,8 @@ const packages: Pkg[] = [
       "3-erlei Saucen",
     ],
     pricing: [
-      { size: "Klein", weight: "100g", price: "CHF 7.50" },
-      { size: "Gross", weight: "120g", price: "CHF 8.00" },
+      { size: "Klein", weight: "100g", price: "CHF 8.00" },
+      { size: "Gross", weight: "120g", price: "CHF 9.00" },
     ],
   },
   {
