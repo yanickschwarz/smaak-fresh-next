@@ -165,8 +165,8 @@ export default function BestelleBurgerPage() {
                 </p>
                 <div className="bg-muted/40 rounded-lg p-4 mt-4">
                   <p className="font-body text-sm font-semibold text-foreground mb-2">Preise</p>
-                  <p className="font-body text-foreground/70 text-sm">Burger klein mit 100g Fleisch à CHF 6.50</p>
-                  <p className="font-body text-foreground/70 text-sm">Burger gross mit 120g Fleisch à CHF 7.00</p>
+                  <p className="font-body text-foreground/70 text-sm">Burger klein mit 100g Fleisch à CHF 7.50</p>
+                  <p className="font-body text-foreground/70 text-sm">Burger gross mit 120g Fleisch à CHF 8.00</p>
                   <p className="font-body text-foreground/50 text-xs mt-2">
                     Preise für Zubereitung vor Ort auf Anfrage!
                   </p>
@@ -208,8 +208,8 @@ export default function BestelleBurgerPage() {
                   <OrderField label="Burgerfleisch *" error={errors.burgerfleisch?.message}>
                     <select {...register("burgerfleisch")} className="form-input">
                       <option value="">Bitte wählen...</option>
-                      <option value="Burger klein (100g)">Burger klein (100g) à CHF 6.50</option>
-                      <option value="Burger gross (120g)">Burger gross (120g) à CHF 7.00</option>
+                      <option value="Burger klein (100g)">Burger klein (100g) à CHF 7.50</option>
+                      <option value="Burger gross (120g)">Burger gross (120g) à CHF 8.00</option>
                     </select>
                   </OrderField>
                   <OrderField label="Anzahl Burger *" error={errors.anzahl?.message}>
